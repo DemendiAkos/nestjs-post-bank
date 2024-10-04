@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <label for="id">ID</label>
+        <input type="text" name="id" value="<%= data.id %>">
+        <br>
+        <label for="owner">Name</label>
+        <input type="text" name="owner" value="<%= data.owner %>">
+        <br>
+        <label for="balance">Balance</label>
+        <input type="number" name="balance" value="<%= data.balance %>">
+        <br>
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <% for(let err of errors) { %>
+        <p style="color: red;"> <%= err %></p>
+    <% } %>
+</body>
+</html>
